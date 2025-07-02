@@ -1,0 +1,114 @@
+/* CSS Variables */
+:root {
+    --font-family-primary: 'Ubuntu', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    --font-weight-normal: 400;
+    --font-weight-medium: 500;
+    --font-weight-semibold: 600;
+    --font-weight-bold: 700;
+    --font-weight-extrabold: 800;
+}
+
+/* Scroll prevention for unauthenticated users */
+body.no-scroll {
+    overflow: hidden;
+    position: fixed;
+    width: 100%;
+    height: 100%;
+}
+
+body.no-scroll .feed-root {
+    overflow: hidden;
+}
+
+/* Ensure modals can still be scrolled when body is locked */
+body.no-scroll .auth-modal-backdrop,
+body.no-scroll .auth-modal-container,
+body.no-scroll .auth-modal {
+    overflow-y: auto;
+    max-height: 100vh;
+}
+
+/* Visual indicator for unauthenticated users */
+body.no-scroll::before {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.02);
+    pointer-events: none;
+    z-index: 1;
+}
+
+body.no-scroll .feed-root {
+    position: relative;
+    z-index: 2;
+}
+
+/* Reset and base styles */
+* {
+    box-sizing: border-box;
+    font-family: var(--font-family-primary);
+}
+
+html,
+body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: var(--font-family-primary);
+    font-weight: var(--font-weight-normal);
+    font-size: 16px;
+    line-height: 1.5;
+    color: #1e293b;
+    background-color: #f8fafc;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+button {
+    font-family: inherit;
+}
+
+/* Remove default button styles */
+button {
+    background: none;
+    border: none;
+    padding: 0;
+    margin: 0;
+    cursor: pointer;
+}
+
+/* Focus styles for accessibility */
+button:focus,
+input:focus,
+textarea:focus {
+    outline: 2px solid #3b82f6;
+    outline-offset: 2px;
+}
+
+/* Remove list styles */
+ul,
+ol {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+/* Image styles */
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+button:focus {
+    outline: none;
+    box-shadow: none;
+}
