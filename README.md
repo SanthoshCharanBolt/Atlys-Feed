@@ -41,8 +41,3 @@
     -   Email: `demo@example.com` / Password: `password123`
     -   Email: `test@user.com` / Password: `testpass`
 
--   **Features**:
-    -   Modal-based sign-in/sign-up flow
-    -   Persistent authentication state
-    -   Protected routes and interactions
-    -   Automatic redirect after successful login
