@@ -34,9 +34,9 @@ const SignUpModal: React.FC<SignUpModalProps> = ({ open, onClose, onSwitchToSign
 
     return (
         <div className="auth-modal-backdrop" onClick={onClose}>
-            <div className="auth-modal-outer-bg">
+            <div className="auth-modal-outer-bg" onClick={(e) => e.stopPropagation()}>
                 <div className="auth-modal-container">
-                    <div className="auth-modal" onClick={(e) => e.stopPropagation()}>
+                    <div className="auth-modal">
                         <LoginIcon />
                         <div className="auth-container">
                             <h2 className="auth-heading">Create an account to continue</h2>
